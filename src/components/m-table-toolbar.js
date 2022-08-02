@@ -57,7 +57,6 @@ export class MTableToolbar extends React.Component {
 
   defaultExportCsv = () => {
     const [columns, data] = this.getTableData();
-
     let fileName = this.props.title || "data";
     if (this.props.exportFileName) {
       fileName =
@@ -169,7 +168,6 @@ export class MTableToolbar extends React.Component {
       return null;
     }
   }
-
   renderDefaultActions() {
     const localization = {
       ...MTableToolbar.defaultProps.localization,
@@ -283,6 +281,16 @@ export class MTableToolbar extends React.Component {
             components={this.props.components}
           />
         </span>
+        <span>
+          <span>
+            <this.props.components.Aggregation
+              icons={this.props.icons}
+              aggregations={this.props.aggregations}
+              components={this.props.components}
+              callAggregation={this.props.callAggregation}
+            />
+          </span>
+        </span>
       </div>
     );
   }
@@ -379,6 +387,7 @@ MTableToolbar.defaultProps = {
   actions: [],
   columns: [],
   columnsButton: false,
+  aggregations: [],
   localization: {
     addRemoveColumns: "Add or remove columns",
     nRowsSelected: "{0} row(s) selected",
@@ -406,11 +415,14 @@ MTableToolbar.defaultProps = {
 };
 
 MTableToolbar.propTypes = {
+  aggregations: PropTypes.array,
+  icons: PropTypes.object.isRequired,
   actions: PropTypes.array,
   columns: PropTypes.array,
   columnsButton: PropTypes.bool,
   components: PropTypes.object.isRequired,
   getFieldValue: PropTypes.func.isRequired,
+  callAggregation: PropTypes.func.isRequired,
   localization: PropTypes.object.isRequired,
   onColumnsChanged: PropTypes.func.isRequired,
   dataManager: PropTypes.object.isRequired,

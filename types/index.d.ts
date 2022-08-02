@@ -63,6 +63,11 @@ export interface MaterialTableProps<RowData extends object> {
    */
   onFilterChange?: (filters: Filter<RowData>[]) => void;
   onSelectionChange?: (data: RowData[], rowData?: RowData) => void;
+  aggregations?: {
+    caption: string;
+    initialValue: number;
+    cb: (data: RowData[]) => React.ReactNode;
+  }[];
   onTreeExpandChange?: (data: any, isExpanded: boolean) => void;
   onQueryChange?: (query: Query<RowData>) => void;
   style?: React.CSSProperties;

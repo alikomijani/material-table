@@ -73,6 +73,8 @@ export const defaultProps = {
   classes: {},
   columns: [],
   components: {
+    AggregationRow: MComponents.MTableFooter,
+    Aggregation: MComponents.MTableAggregate,
     Action: MComponents.MTableAction,
     Actions: MComponents.MTableActions,
     Body: MComponents.MTableBody,
@@ -193,6 +195,11 @@ export const defaultProps = {
         replay
       </Icon>
     )),
+    Aggregations: React.forwardRef((props, ref) => (
+      <Icon {...props} ref={ref}>
+        E
+      </Icon>
+    )),
     /* eslint-enable react/display-name */
   },
   isLoading: false,
@@ -252,7 +259,12 @@ export const defaultProps = {
       labelRowsPerPage: "Rows per page:",
       labelRowsSelect: "rows",
     },
-    toolbar: {},
+    toolbar: {
+      aggregations: {
+        aggregations: "Aggregations",
+        sum: "Sum",
+      },
+    },
     header: {},
     body: {
       filterRow: {},

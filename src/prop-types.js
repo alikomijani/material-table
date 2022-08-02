@@ -32,6 +32,19 @@ export const propTypes = {
       }),
     ])
   ),
+  aggregations: PropTypes.arrayOf(
+    PropTypes.shape({
+      caption: PropTypes.string,
+      initialValue: PropTypes.number,
+      cb: PropTypes.func,
+      icon: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.func,
+        PropTypes.string,
+        RefComponent,
+      ]),
+    })
+  ),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       cellStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),

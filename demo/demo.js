@@ -35,6 +35,7 @@ for (let i = 0; i < 1; i++) {
     type: "adult",
     insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
     time: new Date(1900, 1, 1, 14, 23, 35),
+    age: (100 * Math.random()).toFixed(0),
   };
   bigData.push(d);
 }
@@ -59,6 +60,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: "1994-11-23T08:15:30-05:00",
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 2,
@@ -71,6 +73,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: "1994-11-05T13:15:30Z",
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -84,6 +87,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -97,6 +101,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 3,
       },
       {
@@ -110,6 +115,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 6,
@@ -122,6 +128,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 5,
       },
       {
@@ -135,6 +142,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 21,
@@ -147,6 +155,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -160,6 +169,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -173,6 +183,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 3,
       },
       {
@@ -186,6 +197,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 61,
@@ -198,6 +210,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 5,
       },
       {
@@ -211,6 +224,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 22,
@@ -223,6 +237,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -236,6 +251,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -249,6 +265,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 3,
       },
       {
@@ -262,6 +279,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 62,
@@ -274,6 +292,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 5,
       },
       {
@@ -287,6 +306,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 23,
@@ -299,6 +319,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -312,6 +333,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -325,6 +347,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 3,
       },
       {
@@ -338,6 +361,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 63,
@@ -350,6 +374,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 5,
       },
       {
@@ -363,6 +388,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 24,
@@ -375,6 +401,7 @@ class App extends Component {
         type: "adult",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -388,6 +415,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 1,
       },
       {
@@ -401,6 +429,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 3,
       },
       {
@@ -414,6 +443,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
       },
       {
         id: 64,
@@ -426,6 +456,7 @@ class App extends Component {
         type: "child",
         insertDateTime: new Date(2018, 1, 1, 12, 23, 44),
         time: new Date(1900, 1, 1, 14, 23, 35),
+        age: (100 * Math.random()).toFixed(0),
         parentId: 5,
       },
     ],
@@ -455,6 +486,7 @@ class App extends Component {
       },
       { title: "Tipi", field: "type", removable: false, editable: "never" },
       { title: "Doğum Yılı", field: "birthDate", type: "date" },
+      { title: "Age", field: "age", type: "numeric" },
       {
         title: "Doğum Yeri",
         field: "birthCity",
@@ -463,6 +495,7 @@ class App extends Component {
       { title: "Kayıt Tarihi", field: "insertDateTime", type: "datetime" },
       { title: "Zaman", field: "time", type: "time" },
     ],
+
     remoteColumns: [
       {
         title: "Avatar",
@@ -498,6 +531,14 @@ class App extends Component {
                     onFilterChange={(appliedFilter) => {
                       console.log("selected Filters : ", appliedFilter);
                     }}
+                    aggregations={[
+                      {
+                        caption: "sum",
+                        initialValue: 0,
+                        cb: (a, b) => a + b,
+                        icon: "add",
+                      },
+                    ]}
                     // cellEditable={{
                     //   cellStyle: {},
                     //   onCellEditApproved: (

@@ -13,7 +13,8 @@ import MTableHeader from "./m-table-header";
 import MTablePagination from "./m-table-pagination";
 import MTableSteppedPagination from "./m-table-stepped-pagination";
 import MTableToolbar from "./m-table-toolbar";
-
+import MTableAggregate from "./m-table-aggregate";
+import MTableFooter from "./m-table-footer";
 export {
   MTableAction,
   MTableActions,
@@ -30,4 +31,6 @@ export {
   MTablePagination,
   MTableSteppedPagination,
   MTableToolbar,
+  MTableAggregate,
+  MTableFooter,
 };

@@ -33,7 +33,8 @@ export default class DataManager {
   sortedData = [];
   pagedData = [];
   renderData = [];
-
+  aggregatedDate = {};
+  aggregations = [];
   filtered = false;
   searched = false;
   grouped = false;
@@ -43,10 +44,9 @@ export default class DataManager {
 
   rootGroupsIndex = {};
 
-  constructor() {}
-
   setData(data) {
     this.selectedCount = 0;
+    this.aggregatedDate = {};
 
     this.data = data.map((row, index) => {
       row.tableData = { ...row.tableData, id: index };
@@ -58,7 +58,9 @@ export default class DataManager {
 
     this.filtered = false;
   }
-
+  setAggregations(aggregations) {
+    this.aggregations = aggregations;
+  }
   setColumns(columns) {
     const undefinedWidthColumns = columns.filter((c) =>
       c.width === undefined && c.columnDef
@@ -837,7 +839,25 @@ export default class DataManager {
     this.grouped = true;
     this.rootGroupsIndex = subData.groupsIndex;
   }
-
+  aggregateData(caption) {
+    let result;
+    let data = {};
+    const ag = this.aggregations.find((item) => item.caption === caption);
+    if (ag)
+      this.columns.forEach((col) => {
+        result = null;
+        if (col.type === "currency" || col.type === "numeric") {
+          result = this.data.reduce(
+            (previousValue, currentValue) =>
+              ag.cb(+previousValue, +currentValue[col.field]),
+            ag.initialValue
+          );
+        }
+        Object.assign(data, { [col.field]: result });
+        // this.aggregatedDate[col.field] = result;
+      });
+    this.aggregatedDate = data;
+  }
   treefyData() {
     this.sorted = this.paged = false;
     this.data.forEach((a) => (a.tableData.childRows = null));

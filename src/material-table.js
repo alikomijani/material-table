@@ -23,6 +23,7 @@ export default class MaterialTable extends React.Component {
 
     const calculatedProps = this.getProps(props);
     this.setDataManagerFields(calculatedProps, true);
+    this.dataManager.setAggregations(this.props.aggregations);
     const renderState = this.dataManager.getRenderState();
 
     this.state = {
@@ -50,6 +51,7 @@ export default class MaterialTable extends React.Component {
       showAddRow: false,
       bulkEditOpen: false,
       width: 0,
+      aggregatedData: {},
     };
 
     this.tableContainerDiv = React.createRef();
@@ -81,7 +83,6 @@ export default class MaterialTable extends React.Component {
           ? props.columns[defaultSortColumnIndex].defaultSort
           : "";
     }
-
     this.dataManager.setColumns(props.columns);
     this.dataManager.setDefaultExpanded(props.options.defaultExpanded);
     this.dataManager.changeRowEditing();
@@ -719,7 +720,10 @@ export default class MaterialTable extends React.Component {
     this.dataManager.setEditRowData(rowData, newData);
     this.setState(this.dataManager.getRenderState());
   };
-
+  onAggregationChange = (caption) => {
+    this.dataManager.aggregateData(caption);
+    this.setState({ aggregatedData: this.dataManager.aggregatedDate });
+  };
   onColumnResized = (id, additionalWidth) => {
     this.dataManager.onColumnResized(id, additionalWidth);
     this.setState(this.dataManager.getRenderState());
@@ -907,6 +911,17 @@ export default class MaterialTable extends React.Component {
         onBulkEditRowChanged={this.dataManager.onBulkEditRowChanged}
         scrollWidth={this.state.width}
       />
+      {this.state.aggregatedData && (
+        <props.components.AggregationRow
+          components={props.components}
+          data={this.state.aggregatedData}
+          columns={this.state.columns}
+          icons={props.icons}
+          errorState={this.state.errorState}
+          scrollWidth={this.state.width}
+          options={props.options}
+        />
+      )}
     </Table>
   );
 
@@ -971,6 +986,8 @@ export default class MaterialTable extends React.Component {
             : null}
           {props.options.toolbar && (
             <props.components.Toolbar
+              aggregations={this.props.aggregations}
+              callAggregation={this.onAggregationChange}
               actions={props.actions}
               components={props.components}
               selectedRows={

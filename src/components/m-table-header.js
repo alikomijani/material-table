@@ -10,7 +10,6 @@ import { withStyles } from "@mui/styles";
 import { Draggable } from "react-beautiful-dnd";
 import { Tooltip } from "@mui/material";
 import * as CommonValues from "../utils/common-values";
-import equal from "fast-deep-equal";
 
 /* eslint-enable no-unused-vars */
 
@@ -387,6 +386,13 @@ MTableHeader.propTypes = {
   draggable: PropTypes.bool,
   thirdSortClick: PropTypes.bool,
   tooltip: PropTypes.string,
+  aggregations: PropTypes.arrayOf(
+    PropTypes.shape({
+      caption: PropTypes.string,
+      initialValue: PropTypes.number,
+      cb: PropTypes.func,
+    })
+  ),
 };
 
 export const styles = (theme) => ({
